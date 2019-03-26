@@ -25,7 +25,7 @@ This experience is *not in any way* about becoming an expert JavaScript programm
 
 ### Specifically
 
-Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give. 
+Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give.
 
 **To complete and submit this assignment, you should:**
 
@@ -46,7 +46,7 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 * In answering questions, assume all of the questions include a *explain briefly* note -- you do NOT have to, and should not, write extended paragraphs. Be as concise as you can and explain in your own words. Don't worry about "whether it's enough" -- just worry about conveying your understanding so you can read it later, or even give it to someone else, and the answers will help/make sense.
 
-* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours. 
+* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours.
 
 * **For grading:** we are grading on...
 	* Following the instructions
@@ -57,7 +57,7 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 ### Names of people you have worked with on this assignment
 * List everyone's names and uniqnames who have worked on this assignment with you, **including your own name, but make sure YOUR name is first and bold**
-* Like this: 
+* Like this:
 * **Jackie Cohen (jczetta)**
 * Yea-Ree Chang (cyearee)
 * Ruchi Ookalkar (ruchido)
@@ -78,26 +78,36 @@ Some JavaScript code
 ```
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
+- A code comment in JavaScript looks like this: // this is a comment in JS //.  The characters // need too be put before and after the comment.
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
+- In order to get a JavaScript program to run we just open the file in a web browser.  In this example opening the file `jsPracticeLab.html`in Google Chrome runs the program.
 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
+- *console.log()* works similar to the *print* function, in that we can view our program and make edits without disrupting our code. It's easier to use *console.log* to debug, and make edits as we go.  The other function is *window.alert()* and this allows the user to receive information but not as useful for debugging.
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
+- We would have to comment out *line 12* which is `alert("hello")` in order too get rid of the pop-up box when we load the page.  To have the time displayed I changed the code to: `alert(new Date())` so now everytime that the page is refreshed the current date appears in the text box.
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
+- To change the name so that it reflects a different name, I simply replace `A Name` text with **Madel** within the paranthesis.
 
 * **What does the word `document` represent in this code? Explain briefly.**
+- The word `document`	references the document that is displayed in the browser window. For each method that the code uses the structure looks like `document.getElementsById(#idname)`.  Javascript is a object oriented programming language, therefore the document refers to the properties of the document content.
 
-* **What is happening in line 12 ( 
+* **What is happening in line 18 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
+- In the first part of the equation `document.querySelector("#items").innerHTML` is searching for the element by the id #items within the HTML code.  The second part is setting whatever is in that span and taking the value of `document.getElementsByTagName('li').length` which equals to 9.
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+- I commented out everything in the <script> tag that contain the javascript code and the page color is white.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
+- There are gray boxes on the screen with the `background-color: #b3b3b3` of that paragraph tag <p> set to the specific gray and white outline `border:#FFFFFF` color. To change it I would change the code to `background-color: #40e0d0` to change the color of the box Torqoise and the `border: #9224A6` to change the color to a shade of purple.
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+- I noticed that there was a function in the code called `function copyFunction()` in *line 27* that queries the element id `#cheer` in the *li* tag where the University of Michigan is listed that displays `Go Blue!` every time that the University of Michigan is highlighted and the *ctrl c* is selected.  I noticed this when I tested it out.  So I copied the function and named it something different.  I added the the same line of code in the the tag <li> wfor the `McGill University` and now every time its highlighted and *ctrl c* is selected the text `O Canada` shows near the bottom of the page.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -111,24 +121,51 @@ function handleClick(){
 ```js
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
-
+- In the code above there is a `function handleClick()` that displays the message `hello` everytime that it's clicked. The <button> has an attribute of `onclick=handleClick()` that makes the functions alert to display in the text box.
 
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
+- Below is the code I added: *line 38-40*
 
+```js
+function onSelect(){
+	alert("March 20, 2019")
+}
+```
+*line 63*
+```js
+<button onclick=onSelect() id="its-spring">Spring Equinox 2019</button>
 
+```
 
 ### The next few questions address the `jquerylib_submit_example.html` file.
 
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
+- Each class has a different color.  The `class = error` which is the invalid message property is set to display in red and the `class=good` valid message is set to display in the color blue. The lines below tell us that:
+
+```js
+.error{
+		color: red;
+}
+.good {
+		color: blue;
+}
+```
 
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+- I had to google the definition of *regex* and found that it means *regular expression* which provide  a powerful way to perform something really complex like pattern matching of characters within strings of text with just one line of code as opposed to lengthy lines of code.  
+
+Found two useful sites: https://www.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html and https://www.dofactory.com/tutorial/javascript-regular-expressions
+
+
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
+- for starters although the conditional statements have similar structure, in JavaScript there are more ()  and there are {} being used.  In JavaScript we use the `if` statement to specifiy a block of code to be executed if the condition is true.  And vice versa, we use an `else` statement to specify a block of code to be executed if the condition is false. (referenced: https://www.w3schools.com/js/js_if_else.asp)
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+- I think that the `10000` refers to seconds that the text is meant to be displayed for or to fade out.
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
