@@ -175,6 +175,25 @@ $(document).ready(function(){
 		});
 ```
 
-
-**Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
+* **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
+	Below is the code that I added to the file:
+
+*lines 20-33*
+```js
+if(regex.test(currentValue) == false){
+		$("#result").html('<p class="error">Not valid!</p>').show().fadeOut(10000);
+		// Preventing form submission
+		event.preventDefault();
+} else if (currentValue == 'hello'){
+	$("#result").html('<p class = "good"> Hello to you too!</p>').show().fadeOut(10000)
+	event.preventDefault();;
+}
+	else {
+	$("#result").html('<p class = "good"> Nice!</p>').show().fadeOut(10000);
+	event.preventDefault();
+}
+});
+});
+```
+* I did collaborate with classmates on that last code block.  Zinnia, Dana and I worked together.
