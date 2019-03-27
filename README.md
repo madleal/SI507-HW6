@@ -104,7 +104,7 @@ Some JavaScript code
 	I commented out everything in the <script> tag that contain the javascript code and the page color is white.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
-	There are gray boxes on the screen with the `background-color: #b3b3b3` of that paragraph tag <p> set to the specific gray and white outline `border:#FFFFFF` color. To change it I would change the code to `background-color: #40e0d0` to change the color of the box Torqoise and the `border: #9224A6` to change the color to a shade of purple.
+	There are gray boxes on the screen with the `background-color: #b3b3b3` of that paragraph tag `<p>` set to the specific gray and white outline `border:#FFFFFF` color. To change it I would change the code to `background-color: #40e0d0` to change the color of the box Torqoise and the `border: #9224A6` to change the color to a shade of purple.
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
 	I noticed that there was a function in the code called `function copyFunction()` in *line 27* that queries the element id `#cheer` in the *li* tag where the University of Michigan is listed that displays `Go Blue!` every time that the University of Michigan is highlighted and the *ctrl c* is selected.  I noticed this when I tested it out.  So I copied the function and named it something different.  I added the the same line of code in the the tag <li> wfor the `McGill University` and now every time its highlighted and *ctrl c* is selected the text `O Canada` shows near the bottom of the page.
@@ -167,7 +167,7 @@ function onSelect(){
 	I think that the `10000` refers to seconds that the text is meant to be displayed for or to fade out.
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
-	The code below is saying that when the document is being open there is a function that is going to submit and generate a submission when the function is being invoked. It has a callback function that basically tells it to submit when the event is being executed. In the line `$("form").submit(function(event)` its preventing the form to be submitted until something is inputted. 
+	The code below is saying that when the document is being open there is a function that is going to submit and generate a submission when the function is being invoked. It has a callback function that basically tells it to submit when the event is being executed. In the line `$("form").submit(function(event)` its preventing the form to be submitted until something is inputted.
 
 ```js
 $(document).ready(function(){
